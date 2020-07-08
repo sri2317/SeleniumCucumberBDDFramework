@@ -7,17 +7,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import Pages.loginPage;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import pagefactory.HomePage_PF;
 import pagefactory.LoginPage_PF;
 
 public class LoginDemo_PF {
 
-	WebDriver driver =null;
+	 WebDriver driver =null;
 	LoginPage_PF login; //object or instance
 	HomePage_PF home;
 	
+	
 	@Given("browser is open")
+	
 	public void browser_is_open() {
 		System.out.println("====I am inside,LoginDemo_PF class==== ");
 		System.out.println("inside step : Launching the browser");
@@ -34,7 +37,7 @@ public class LoginDemo_PF {
 		driver.manage().window().maximize();
 
 	}
-
+	
 	@And("user is on login page")
 	public void user_is_on_login_page() {
 
@@ -44,7 +47,7 @@ public class LoginDemo_PF {
 		driver.navigate().to("https://example.testproject.io/web/");
 
 	}
-
+	
 	@When("^user enters (.*) and (.*)$")
 	public void user_enters_username_and_password(String username, String password) throws InterruptedException{
 
@@ -52,7 +55,7 @@ public class LoginDemo_PF {
 		
 		login.enterUsername(username); //page object model using page factory concept
 		login.enterpassword(password);
-		
+		Thread.sleep(1000);
 		
 //		driver.findElement(By.id("name")).sendKeys(username);
 //		driver.findElement(By.id("password")).sendKeys(password);
@@ -65,19 +68,17 @@ public class LoginDemo_PF {
 		login.ClickonLogin();
 		
 		//driver.findElement(By.id("login")).click();
-		Thread.sleep(20000);
+		Thread.sleep(10000);
 	}
+	
+//	@Then("user is navigated to the home page")
+//	public void user_is_navigated_to_the_home_page() throws InterruptedException {
+//		
+//		home = new HomePage_PF(driver);
+//		home.checkLogoutIsDisplayed();
+//		//driver.findElement(By.id("logout")).isDisplayed();
+//		Thread.sleep(2000);
 
-	@Then("user is navigated to the home page")
-	public void user_is_navigated_to_the_home_page() throws InterruptedException {
 		
-		home = new HomePage_PF(driver);
-		home.checkLogoutIsDisplayed();
-		//driver.findElement(By.id("logout")).isDisplayed();
-		Thread.sleep(2000);
-
-		driver.close();
-		driver.quit();
 	}
 
-}

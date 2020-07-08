@@ -11,7 +11,7 @@ monochrome = true,
 
 plugin = { "pretty",  "junit:target/Junitreports/report.xml",
 						"json:target/JSONreports/report.json","html:target/HtmlReports"},
-tags="@smoke"
+tags= {"@Login or @Home"}
 		
 		)
 
