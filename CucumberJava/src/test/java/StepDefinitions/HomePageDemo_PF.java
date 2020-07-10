@@ -14,9 +14,10 @@ import pagefactory.HomePage_PF;
 
 public class HomePageDemo_PF {
 
-	public static WebDriver driver =null;
+	 WebDriver driver =null;
 	//LoginPage_PF login; //object or instance
 	HomePage_PF home ;
+	//single_instance = null; 
 	
 	@Given("home page is open")
 	
@@ -33,6 +34,7 @@ public class HomePageDemo_PF {
 	@When("^Enter HomePage details (.*) and  (.*)$")
 	public void enter_HomePage_details_address_and_email(String address, String email) {
 		System.out.println("Home page details");
+		driver = SingletonDriverClass.getInstance();
 		home = new HomePage_PF(driver);
 		home.enterAddress(address);
 		home.enterEmail(email);

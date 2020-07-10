@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import StepDefinitions.SingletonDriverClass;
+
 public class HomePage_PF {
 
 	@FindBy(id="logout")
@@ -25,8 +27,9 @@ public class HomePage_PF {
 	@FindBy(id="phone")
 	WebElement txt_phone;
 
-	WebDriver driver;
-
+	//WebDriver driver;
+	WebDriver driver = SingletonDriverClass.getInstance();
+	
 	//constructor
 	public HomePage_PF(WebDriver driver) {
 		this.driver = driver;

@@ -1,4 +1,4 @@
-@After
+
 @Home
 Feature: Enter Homepage Information
 //@smoke: scenario2
