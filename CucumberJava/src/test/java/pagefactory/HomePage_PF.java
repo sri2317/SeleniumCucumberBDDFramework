@@ -52,8 +52,9 @@ public class HomePage_PF {
 		txt_email.sendKeys(email);
 	}
 	
-	public void enterPhone(CharSequence[] phone) {
+	public void enterPhone( String phone) {
 		txt_phone.sendKeys(phone);
+		
 	}
 	
 	public void clickOnSave() {

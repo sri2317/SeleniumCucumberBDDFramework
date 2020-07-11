@@ -21,7 +21,7 @@
 //
 //		System.setProperty("webdriver.chrome.driver", projectpath+"/src/test/resources/drivers/chromedriver.exe");
 //
-//		driver = new ChromeDriver();
+//		//driver = new ChromeDriver();
 //
 //		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); //if page is open, but not all the elements are not launched
 //		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);

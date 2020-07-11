@@ -21,13 +21,14 @@ public class LoginPage_PF {
 	@FindBy(id = "login")
 	WebElement btn_login;
 
-	WebDriver driver = SingletonDriverClass.getInstance();
 	
+	WebDriver driver = SingletonDriverClass.getInstance();
 	
 //	constructor
 	public LoginPage_PF(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		
 	}
 
 	

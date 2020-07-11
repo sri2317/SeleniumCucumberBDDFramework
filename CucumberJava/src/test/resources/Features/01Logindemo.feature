@@ -1,4 +1,3 @@
-
 @Login
 Feature: Test login functionality
 //@smoke: scenario1
