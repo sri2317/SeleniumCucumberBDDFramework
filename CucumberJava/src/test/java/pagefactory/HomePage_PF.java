@@ -26,6 +26,9 @@ public class HomePage_PF {
 	
 	@FindBy(id="phone")
 	WebElement txt_phone;
+	
+	@FindBy(id="saved")
+	WebElement txt_saved;
 
 	//WebDriver driver;
 	WebDriver driver = SingletonDriverClass.getInstance();
@@ -61,6 +64,9 @@ public class HomePage_PF {
 		btn_save.click();
 	}
 
+	public void success() {
+		txt_saved.isDisplayed();
+	}
 	
 }
 

@@ -10,7 +10,7 @@ Feature: Enter Homepage Information
         
     Examples: 
       |country| address|email|phone|
-      |India| address1 |abc@gmail.com|12345678|       
+      |India| address1 |abc!gmail.com|12345678|       
       
 	       
       

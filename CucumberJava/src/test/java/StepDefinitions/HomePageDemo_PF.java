@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import org.junit.Assert;
 //import java.util.concurrent.TimeUnit;
 //
 //import org.openqa.selenium.By;
@@ -56,6 +57,8 @@ public class HomePageDemo_PF {
 	public void user_details_should_be_saved() {
 		home.clickOnSave();
 		System.out.println("user details saved");
+		home.success();
+		
 		driver.close();
 		driver.quit();
 	}
